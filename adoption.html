@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetCare | Find a Friend</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-page" class="login-page">
+        <div id="login-box" class="auth-box">
+            <h1>🐾 PetCare</h1>
+            <h2>Login</h2>
+            <form id="login-form">
+                <input type="email" id="login-email" placeholder="Enter Email" required>
+                <input type="password" id="login-password" placeholder="Enter Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p id="login-message"></p>
+            <p>Don't have an account? <a href="#" onclick="showSignup()">Sign Up</a></p>
+        </div>
+        <div id="signup-box" class="auth-box hidden">
+            <h1>🐾 PetCare</h1>
+            <h2>Create Account</h2>
+            <form id="signup-form">
+                <input type="text" id="signup-name" placeholder="Full Name" required>
+                <input type="email" id="signup-email" placeholder="Email" required>
+                <input type="password" id="signup-password" placeholder="Password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+        </div>
+    </div>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">🐾 PetCare</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="veterinarians.html">Veterinarians</a></li>
+                <li><a href="appointment.html">Book Appointment</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><button type="button" class="auth-nav-link auth-nav-signup" onclick="showLogin()">Login</button></li>
+                <li><button type="button" class="auth-nav-link auth-nav-signup" onclick="showSignup()">Sign Up</button></li>
+            </ul>
+        </nav>
+        <nav class="feature-nav" aria-label="Featured options">
+            <a href="my-pets.html"><span aria-hidden="true">🐾</span> My Pets</a>
+            <a href="pet-pal.html"><span aria-hidden="true">💬</span> Pet Pal</a>
+            <a href="adoption.html" aria-current="page"><span aria-hidden="true">🏡</span> Find a Friend</a>
+            <a href="services.html"><span aria-hidden="true">✨</span> Care Picks</a>
+            <a href="products.html"><span aria-hidden="true">🛍️</span> Pet Products</a>
+        </nav>
+        <div class="more-menu-bar">
+            <button type="button" class="more-menu-toggle" aria-expanded="false" aria-controls="more-menu" onclick="openMoreMenu()">☰ More</button>
+        </div>
+        <div id="more-menu-overlay" class="more-menu-overlay" hidden>
+            <button type="button" class="more-menu-backdrop" aria-label="Close More menu" onclick="closeMoreMenu()"></button>
+            <aside id="more-menu" class="more-menu" aria-label="More options" aria-hidden="true">
+                <div class="more-menu-heading">
+                    <h2>More Options</h2>
+                    <button type="button" class="more-menu-close" aria-label="Close More menu" onclick="closeMoreMenu()">×</button>
+                </div>
+                <nav aria-label="More options">
+                    <ul class="more-menu-links">
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="more.html#faqs">FAQs</a></li>
+                        <li><a href="more.html#pet-care-tips">Pet Care Tips</a></li>
+                        <li><a href="more.html#offers">Offers</a></li>
+                        <li><a href="adoption.html">Adopt a Pet</a></li>
+                    </ul>
+                </nav>
+            </aside>
+        </div>
+        <div class="announcement" aria-hidden="true">
+            <div class="announcement-track">
+                <span>Healthy pets, happy homes | Explore our care options | Book your pet's next visit</span>
+                <span>Healthy pets, happy homes | Explore our care options | Book your pet's next visit</span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="section more-tinted">
+            <h2>Find a Friend</h2>
+            <p class="section-intro">Meet some charming fictional pets from our demo gallery.</p>
+            <div class="service-container adoption-grid">
+                <article class="service-card adoption-card">
+                    <img class="adoption-photo" src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Golden dog sitting outdoors">
+                    <h3>Milo</h3>
+                    <p>Golden retriever · Sample profile</p>
+                    <p>Playful and ready for long walks and games.</p>
+                </article>
+                <article class="service-card adoption-card">
+                    <img class="adoption-photo" src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Curious tabby cat">
+                    <h3>Luna</h3>
+                    <p>Tabby cat · Sample profile</p>
+                    <p>A curious explorer who loves a sunny nap.</p>
+                </article>
+                <article class="service-card adoption-card">
+                    <img class="adoption-photo" src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Small dog relaxing on grass">
+                    <h3>Charlie</h3>
+                    <p>Mixed-breed dog · Sample profile</p>
+                    <p>A cheerful little companion with a big heart.</p>
+                </article>
+                <article class="service-card adoption-card">
+                    <img class="adoption-photo" src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Fluffy cat looking at the camera">
+                    <h3>Pepper</h3>
+                    <p>Domestic cat · Sample profile</p>
+                    <p>Gentle, observant, and fond of cozy corners.</p>
+                </article>
+                <article class="service-card adoption-card">
+                    <img class="adoption-photo" src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Two friendly dogs playing together">
+                    <h3>Ollie</h3>
+                    <p>Mixed-breed dog · Sample profile</p>
+                    <p>Loves friendly play and making new pals.</p>
+                </article>
+                <article class="service-card adoption-card">
+                    <img class="adoption-photo" src="https://images.unsplash.com/photo-1495360010541-f48722b34f7d?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Relaxed cat resting indoors">
+                    <h3>Coco</h3>
+                    <p>Domestic cat · Sample profile</p>
+                    <p>A relaxed cuddle buddy who enjoys quiet afternoons.</p>
+                </article>
+                <article class="service-card adoption-card">
+                    <img class="adoption-photo" src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Happy small dog sitting outside">
+                    <h3>Bailey</h3>
+                    <p>Small-breed dog · Sample profile</p>
+                    <p>Curious, sweet, and always up for a little adventure.</p>
+                </article>
+                <article class="service-card adoption-card">
+                    <img class="adoption-photo" src="https://images.unsplash.com/photo-1533738363-b7f9aef128ce?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Cat enjoying a comfortable resting spot">
+                    <h3>Maple</h3>
+                    <p>Domestic cat · Sample profile</p>
+                    <p>A soft-hearted friend who appreciates gentle play.</p>
+                </article>
+            </div>
+            <p class="demo-note">All profiles are fictional and the photos are illustrative; no animals shown are listed for adoption. For real pets, contact a reputable local shelter or rescue.</p>
+            <p class="demo-note"><a class="home-preview-link" href="contact.html">Ask about adoption resources</a></p>
+        </section>
+    </main>
+    <footer>
+        <h2>Contact Us</h2>
+        <p>Email: info@example.com</p>
+        <p>Phone: 9876543210</p>
+        <p>Opening Hours: 10 AM – 5 PM</p>
+        <p class="copyright">&copy; 2026 PetCare. College project demonstration.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

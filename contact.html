@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetCare | Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-page" class="login-page">
+        <div id="login-box" class="auth-box">
+            <h1>🐾 PetCare</h1>
+            <h2>Login</h2>
+            <form id="login-form">
+                <input type="email" id="login-email" placeholder="Enter Email" required>
+                <input type="password" id="login-password" placeholder="Enter Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p id="login-message"></p>
+            <p>Don't have an account? <a href="#" onclick="showSignup()">Sign Up</a></p>
+        </div>
+        <div id="signup-box" class="auth-box hidden">
+            <h1>🐾 PetCare</h1>
+            <h2>Create Account</h2>
+            <form id="signup-form">
+                <input type="text" id="signup-name" placeholder="Full Name" required>
+                <input type="email" id="signup-email" placeholder="Email" required>
+                <input type="password" id="signup-password" placeholder="Password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+        </div>
+    </div>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">🐾 PetCare</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="veterinarians.html">Veterinarians</a></li>
+                <li><a href="appointment.html">Book Appointment</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><button type="button" class="auth-nav-link auth-nav-signup" onclick="showLogin()">Login</button></li>
+                <li><button type="button" class="auth-nav-link auth-nav-signup" onclick="showSignup()">Sign Up</button></li>
+            </ul>
+        </nav>
+        <nav class="feature-nav" aria-label="Featured options">
+            <a href="my-pets.html"><span aria-hidden="true">🐾</span> My Pets</a>
+            <a href="pet-pal.html"><span aria-hidden="true">💬</span> Pet Pal</a>
+            <a href="adoption.html"><span aria-hidden="true">🏡</span> Find a Friend</a>
+            <a href="services.html"><span aria-hidden="true">✨</span> Care Picks</a>
+            <a href="products.html"><span aria-hidden="true">🛍️</span> Pet Products</a>
+        </nav>
+        <div class="more-menu-bar">
+            <button type="button" class="more-menu-toggle" aria-expanded="false" aria-controls="more-menu" onclick="openMoreMenu()">☰ More</button>
+        </div>
+        <div id="more-menu-overlay" class="more-menu-overlay" hidden>
+            <button type="button" class="more-menu-backdrop" aria-label="Close More menu" onclick="closeMoreMenu()"></button>
+            <aside id="more-menu" class="more-menu" aria-label="More options" aria-hidden="true">
+                <div class="more-menu-heading">
+                    <h2>More Options</h2>
+                    <button type="button" class="more-menu-close" aria-label="Close More menu" onclick="closeMoreMenu()">×</button>
+                </div>
+                <nav aria-label="More options">
+                    <ul class="more-menu-links">
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="more.html#faqs">FAQs</a></li>
+                        <li><a href="more.html#pet-care-tips">Pet Care Tips</a></li>
+                        <li><a href="more.html#offers">Offers</a></li>
+                        <li><a href="adoption.html">Adopt a Pet</a></li>
+                    </ul>
+                </nav>
+            </aside>
+        </div>
+        <div class="announcement" aria-hidden="true">
+            <div class="announcement-track">
+                <span>Healthy pets, happy homes | Explore our care options | Book your pet's next visit</span>
+                <span>Healthy pets, happy homes | Explore our care options | Book your pet's next visit</span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="section">
+            <h2>Contact Us</h2>
+            <p class="section-intro">We're here to help you and your pet.</p>
+            <div class="about-section">
+                <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
+                <p>Phone: <a href="tel:9876543210">9876543210</a></p>
+                <p>Opening Hours: 10 AM – 5 PM</p>
+            </div>
+        </section>
+        <section class="section inquiry-section">
+            <h2>Send an Inquiry</h2>
+            <p class="section-intro">Have a question? Send us a message.</p>
+            <form id="inquiry-form">
+                <div class="form-group">
+                    <label for="inquiry-name">Your Name</label>
+                    <input type="text" id="inquiry-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="inquiry-email">Email Address</label>
+                    <input type="email" id="inquiry-email" name="email" required>
+                </div>
+                <div class="form-group full-width">
+                    <label for="inquiry-subject">Subject</label>
+                    <input type="text" id="inquiry-subject" name="subject" required>
+                </div>
+                <div class="form-group full-width">
+                    <label for="inquiry-message">Message</label>
+                    <textarea id="inquiry-message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn submit-btn">Send Inquiry</button>
+                <p id="inquiry-form-message" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <h2>Contact Us</h2>
+        <p>Email: info@example.com</p>
+        <p>Phone: 9876543210</p>
+        <p>Opening Hours: 10 AM – 5 PM</p>
+        <p class="copyright">&copy; 2026 PetCare. College project demonstration.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

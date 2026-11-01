@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetCare | More Information</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-page" class="login-page">
+        <div id="login-box" class="auth-box">
+            <h1>🐾 PetCare</h1>
+            <h2>Login</h2>
+            <form id="login-form">
+                <input type="email" id="login-email" placeholder="Enter Email" required>
+                <input type="password" id="login-password" placeholder="Enter Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p id="login-message"></p>
+            <p>Don't have an account? <a href="#" onclick="showSignup()">Sign Up</a></p>
+        </div>
+        <div id="signup-box" class="auth-box hidden">
+            <h1>🐾 PetCare</h1>
+            <h2>Create Account</h2>
+            <form id="signup-form">
+                <input type="text" id="signup-name" placeholder="Full Name" required>
+                <input type="email" id="signup-email" placeholder="Email" required>
+                <input type="password" id="signup-password" placeholder="Password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+        </div>
+    </div>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">🐾 PetCare</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="veterinarians.html">Veterinarians</a></li>
+                <li><a href="appointment.html">Book Appointment</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><button type="button" class="auth-nav-link auth-nav-signup" onclick="showLogin()">Login</button></li>
+                <li><button type="button" class="auth-nav-link auth-nav-signup" onclick="showSignup()">Sign Up</button></li>
+            </ul>
+        </nav>
+        <nav class="feature-nav" aria-label="Featured options">
+            <a href="my-pets.html"><span aria-hidden="true">🐾</span> My Pets</a>
+            <a href="pet-pal.html"><span aria-hidden="true">💬</span> Pet Pal</a>
+            <a href="adoption.html"><span aria-hidden="true">🏡</span> Find a Friend</a>
+            <a href="services.html"><span aria-hidden="true">✨</span> Care Picks</a>
+            <a href="products.html"><span aria-hidden="true">🛍️</span> Pet Products</a>
+        </nav>
+        <div class="more-menu-bar">
+            <button type="button" class="more-menu-toggle" aria-expanded="false" aria-controls="more-menu" onclick="openMoreMenu()">☰ More</button>
+        </div>
+        <div id="more-menu-overlay" class="more-menu-overlay" hidden>
+            <button type="button" class="more-menu-backdrop" aria-label="Close More menu" onclick="closeMoreMenu()"></button>
+            <aside id="more-menu" class="more-menu" aria-label="More options" aria-hidden="true">
+                <div class="more-menu-heading">
+                    <h2>More Options</h2>
+                    <button type="button" class="more-menu-close" aria-label="Close More menu" onclick="closeMoreMenu()">×</button>
+                </div>
+                <nav aria-label="More options">
+                    <ul class="more-menu-links">
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="#faqs">FAQs</a></li>
+                        <li><a href="#pet-care-tips">Pet Care Tips</a></li>
+                        <li><a href="#offers">Offers</a></li>
+                        <li><a href="adoption.html">Adopt a Pet</a></li>
+                    </ul>
+                </nav>
+            </aside>
+        </div>
+        <div class="announcement" aria-hidden="true">
+            <div class="announcement-track">
+                <span>Healthy pets, happy homes | Explore our care options | Book your pet's next visit</span>
+                <span>Healthy pets, happy homes | Explore our care options | Book your pet's next visit</span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="section" id="faqs">
+            <h2>Frequently Asked Questions</h2>
+            <p class="section-intro">Quick answers to common questions.</p>
+            <div class="more-content">
+                <details class="more-details">
+                    <summary>How do I request an appointment?</summary>
+                    <p>Use the Book Appointment page, complete the form, and submit your request. This project is a demo, so requests are not sent to a clinic.</p>
+                </details>
+                <details class="more-details">
+                    <summary>What should I bring to a visit?</summary>
+                    <p>Bring any relevant medical or vaccination records, a list of medications, and notes about the questions or changes you would like to discuss.</p>
+                </details>
+                <details class="more-details">
+                    <summary>Does this website provide emergency care?</summary>
+                    <p>No. For urgent symptoms or injuries, contact a local emergency veterinary clinic immediately.</p>
+                </details>
+            </div>
+        </section>
+
+        <section class="section more-tinted" id="pet-care-tips">
+            <h2>Pet Care Tips</h2>
+            <p class="section-intro">A few everyday reminders for caring for a pet.</p>
+            <div class="more-content">
+                <ul class="tips-list">
+                    <li>Keep fresh water available and feed an appropriate, balanced diet.</li>
+                    <li>Provide regular activity, enrichment, and a comfortable resting space.</li>
+                    <li>Keep up with routine veterinary checkups and ask a veterinarian about preventive care.</li>
+                    <li>Use identification and keep your contact details current.</li>
+                </ul>
+                <p class="demo-note">These general tips do not replace advice from a veterinarian who knows your pet.</p>
+            </div>
+        </section>
+
+        <section class="section" id="offers">
+            <h2>Offers</h2>
+            <p class="section-intro">Information about promotions.</p>
+            <div class="more-content more-card">
+                <p>There are no active offers listed in this demonstration website. Contact us to ask about current services and pricing.</p>
+                <a class="home-preview-link" href="contact.html">Contact PetCare</a>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <h2>Contact Us</h2>
+        <p>Email: info@example.com</p>
+        <p>Phone: 9876543210</p>
+        <p>Opening Hours: 10 AM – 5 PM</p>
+        <p class="copyright">&copy; 2026 PetCare. College project demonstration.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

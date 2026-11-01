@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetCare | Services</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-page" class="login-page">
+        <div id="login-box" class="auth-box">
+            <h1>🐾 PetCare</h1>
+            <h2>Login</h2>
+            <form id="login-form">
+                <input type="email" id="login-email" placeholder="Enter Email" required>
+                <input type="password" id="login-password" placeholder="Enter Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p id="login-message"></p>
+            <p>Don't have an account? <a href="#" onclick="showSignup()">Sign Up</a></p>
+        </div>
+        <div id="signup-box" class="auth-box hidden">
+            <h1>🐾 PetCare</h1>
+            <h2>Create Account</h2>
+            <form id="signup-form">
+                <input type="text" id="signup-name" placeholder="Full Name" required>
+                <input type="email" id="signup-email" placeholder="Email" required>
+                <input type="password" id="signup-password" placeholder="Password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+        </div>
+    </div>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">🐾 PetCare</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="veterinarians.html">Veterinarians</a></li>
+                <li><a href="appointment.html">Book Appointment</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><button type="button" class="auth-nav-link auth-nav-signup" onclick="showLogin()">Login</button></li>
+                <li><button type="button" class="auth-nav-link auth-nav-signup" onclick="showSignup()">Sign Up</button></li>
+            </ul>
+        </nav>
+        <nav class="feature-nav" aria-label="Featured options">
+            <a href="my-pets.html"><span aria-hidden="true">🐾</span> My Pets</a>
+            <a href="pet-pal.html"><span aria-hidden="true">💬</span> Pet Pal</a>
+            <a href="adoption.html"><span aria-hidden="true">🏡</span> Find a Friend</a>
+            <a href="services.html"><span aria-hidden="true">✨</span> Care Picks</a>
+            <a href="products.html"><span aria-hidden="true">🛍️</span> Pet Products</a>
+        </nav>
+        <div class="more-menu-bar">
+            <button type="button" class="more-menu-toggle" aria-expanded="false" aria-controls="more-menu" onclick="openMoreMenu()">☰ More</button>
+        </div>
+        <div id="more-menu-overlay" class="more-menu-overlay" hidden>
+            <button type="button" class="more-menu-backdrop" aria-label="Close More menu" onclick="closeMoreMenu()"></button>
+            <aside id="more-menu" class="more-menu" aria-label="More options" aria-hidden="true">
+                <div class="more-menu-heading">
+                    <h2>More Options</h2>
+                    <button type="button" class="more-menu-close" aria-label="Close More menu" onclick="closeMoreMenu()">×</button>
+                </div>
+                <nav aria-label="More options">
+                    <ul class="more-menu-links">
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="more.html#faqs">FAQs</a></li>
+                        <li><a href="more.html#pet-care-tips">Pet Care Tips</a></li>
+                        <li><a href="more.html#offers">Offers</a></li>
+                        <li><a href="adoption.html">Adopt a Pet</a></li>
+                    </ul>
+                </nav>
+            </aside>
+        </div>
+        <div class="announcement" aria-hidden="true">
+            <div class="announcement-track">
+                <span>Healthy pets, happy homes | Explore our care options | Book your pet's next visit</span>
+                <span>Healthy pets, happy homes | Explore our care options | Book your pet's next visit</span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="section">
+            <h2>Our Services</h2>
+            <p class="section-intro">Everything your pet needs to stay happy and healthy.</p>
+            <div class="service-container">
+                <article class="service-card">
+                    <div class="service-icon">🩺</div>
+                    <h3>Health Checkup</h3>
+                    <p>Routine health examinations for your pet.</p>
+                    <details class="service-details">
+                        <summary>More details</summary>
+                        <p>A general visit can include a review of your pet's health history and a nose-to-tail physical examination. The veterinarian can discuss changes in behavior, answer care questions, and recommend follow-up if needed.</p>
+                    </details>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon">💉</div>
+                    <h3>Vaccination</h3>
+                    <p>Book appointments for recommended vaccinations.</p>
+                    <details class="service-details">
+                        <summary>More details</summary>
+                        <p>The veterinarian reviews your pet's age, health, lifestyle, and vaccination history to discuss an appropriate vaccine plan. Bring any available medical records to the appointment.</p>
+                    </details>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon">✂️</div>
+                    <h3>Pet Grooming</h3>
+                    <p>Bathing, brushing, and grooming services.</p>
+                    <details class="service-details">
+                        <summary>More details</summary>
+                        <p>Grooming may include bathing, coat brushing, nail trimming, and basic coat care. Tell the groomer about your pet's sensitivities or comfort needs before the visit.</p>
+                    </details>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon">❤️</div>
+                    <h3>Pet Wellness</h3>
+                    <p>General wellness consultations for your pet.</p>
+                    <details class="service-details">
+                        <summary>More details</summary>
+                        <p>A wellness consultation focuses on everyday habits such as activity, weight, preventive care, and changes you have noticed. The veterinarian can help identify topics that may need a separate examination.</p>
+                    </details>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon">🦷</div>
+                    <h3>Dental Care</h3>
+                    <p>Oral health checks and dental cleaning guidance.</p>
+                    <details class="service-details">
+                        <summary>More details</summary>
+                        <p>The veterinarian can check your pet's mouth and discuss signs of dental problems, home-care routines, and whether a professional cleaning should be considered.</p>
+                    </details>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon">🥗</div>
+                    <h3>Nutrition Advice</h3>
+                    <p>Food and diet guidance tailored to your pet.</p>
+                    <details class="service-details">
+                        <summary>More details</summary>
+                        <p>Discuss your pet's current food, feeding routine, age, activity, and any dietary concerns. Recommendations depend on your pet's individual needs and veterinary history.</p>
+                    </details>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon">🩹</div>
+                    <h3>First Aid Consultation</h3>
+                    <p>Get guidance on basic pet first aid and next steps.</p>
+                    <details class="service-details">
+                        <summary>More details</summary>
+                        <p>Learn general preparedness and how to recognize when prompt veterinary care may be needed. This consultation is not emergency treatment; contact an emergency veterinarian immediately for urgent symptoms or injuries.</p>
+                    </details>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon">🐾</div>
+                    <h3>Puppy &amp; Kitten Care</h3>
+                    <p>Helpful care advice for your newest family member.</p>
+                    <details class="service-details">
+                        <summary>More details</summary>
+                        <p>New-pet visits can cover early health checks, vaccination planning, parasite prevention, feeding, socialization, and routine care. Bring any records from the breeder, shelter, or previous caregiver.</p>
+                    </details>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h2>Contact Us</h2>
+        <p>Email: info@example.com</p>
+        <p>Phone: 9876543210</p>
+        <p>Opening Hours: 10 AM – 5 PM</p>
+        <p class="copyright">&copy; 2026 PetCare. College project demonstration.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

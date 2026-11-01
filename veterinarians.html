@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetCare | Veterinarians</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-page" class="login-page">
+        <div id="login-box" class="auth-box">
+            <h1>🐾 PetCare</h1>
+            <h2>Login</h2>
+            <form id="login-form">
+                <input type="email" id="login-email" placeholder="Enter Email" required>
+                <input type="password" id="login-password" placeholder="Enter Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p id="login-message"></p>
+            <p>Don't have an account? <a href="#" onclick="showSignup()">Sign Up</a></p>
+        </div>
+        <div id="signup-box" class="auth-box hidden">
+            <h1>🐾 PetCare</h1>
+            <h2>Create Account</h2>
+            <form id="signup-form">
+                <input type="text" id="signup-name" placeholder="Full Name" required>
+                <input type="email" id="signup-email" placeholder="Email" required>
+                <input type="password" id="signup-password" placeholder="Password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+        </div>
+    </div>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">🐾 PetCare</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="veterinarians.html">Veterinarians</a></li>
+                <li><a href="appointment.html">Book Appointment</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><button type="button" class="auth-nav-link auth-nav-signup" onclick="showLogin()">Login</button></li>
+                <li><button type="button" class="auth-nav-link auth-nav-signup" onclick="showSignup()">Sign Up</button></li>
+            </ul>
+        </nav>
+        <nav class="feature-nav" aria-label="Featured options">
+            <a href="my-pets.html"><span aria-hidden="true">🐾</span> My Pets</a>
+            <a href="pet-pal.html"><span aria-hidden="true">💬</span> Pet Pal</a>
+            <a href="adoption.html"><span aria-hidden="true">🏡</span> Find a Friend</a>
+            <a href="services.html"><span aria-hidden="true">✨</span> Care Picks</a>
+            <a href="products.html"><span aria-hidden="true">🛍️</span> Pet Products</a>
+        </nav>
+        <div class="more-menu-bar">
+            <button type="button" class="more-menu-toggle" aria-expanded="false" aria-controls="more-menu" onclick="openMoreMenu()">☰ More</button>
+        </div>
+        <div id="more-menu-overlay" class="more-menu-overlay" hidden>
+            <button type="button" class="more-menu-backdrop" aria-label="Close More menu" onclick="closeMoreMenu()"></button>
+            <aside id="more-menu" class="more-menu" aria-label="More options" aria-hidden="true">
+                <div class="more-menu-heading">
+                    <h2>More Options</h2>
+                    <button type="button" class="more-menu-close" aria-label="Close More menu" onclick="closeMoreMenu()">×</button>
+                </div>
+                <nav aria-label="More options">
+                    <ul class="more-menu-links">
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="more.html#faqs">FAQs</a></li>
+                        <li><a href="more.html#pet-care-tips">Pet Care Tips</a></li>
+                        <li><a href="more.html#offers">Offers</a></li>
+                        <li><a href="adoption.html">Adopt a Pet</a></li>
+                    </ul>
+                </nav>
+            </aside>
+        </div>
+        <div class="announcement" aria-hidden="true">
+            <div class="announcement-track">
+                <span>Healthy pets, happy homes | Explore our care options | Book your pet's next visit</span>
+                <span>Healthy pets, happy homes | Explore our care options | Book your pet's next visit</span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="section doctors-section">
+            <h2>Meet Our Veterinarians</h2>
+            <p class="section-intro">Meet the professionals who care for your pets.</p>
+            <div class="doctor-container">
+                <article class="doctor-card">
+                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&amp;fit=crop&amp;w=500&amp;q=80"
+                         alt="Veterinarian profile">
+                    <h3>Dr. Priya Sharma</h3>
+                    <p>General Pet Care</p>
+                </article>
+                <article class="doctor-card">
+                    <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&amp;fit=crop&amp;w=500&amp;q=80"
+                         alt="Veterinarian profile">
+                    <h3>Dr. Rahul Verma</h3>
+                    <p>Pet Wellness</p>
+                </article>
+                <article class="doctor-card">
+                    <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&amp;fit=crop&amp;w=500&amp;q=80"
+                         alt="Veterinarian profile">
+                    <h3>Dr. Ananya Patel</h3>
+                    <p>Preventive Care</p>
+                </article>
+                <article class="doctor-card">
+                    <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&amp;fit=crop&amp;w=500&amp;q=80"
+                         alt="Veterinarian profile">
+                    <h3>Dr. Arjun Mehta</h3>
+                    <p>Animal Nutrition</p>
+                </article>
+                <article class="doctor-card">
+                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&amp;fit=crop&amp;w=500&amp;q=80"
+                         alt="Veterinarian profile">
+                    <h3>Dr. Neha Kapoor</h3>
+                    <p>Dental Care</p>
+                </article>
+                <article class="doctor-card">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&amp;fit=crop&amp;w=500&amp;q=80"
+                         alt="Veterinarian profile">
+                    <h3>Dr. Kabir Singh</h3>
+                    <p>Puppy &amp; Kitten Care</p>
+                </article>
+            </div>
+            <p class="demo-note">Sample profiles for demonstration purposes.</p>
+        </section>
+    </main>
+    <footer>
+        <h2>Contact Us</h2>
+        <p>Email: info@example.com</p>
+        <p>Phone: 9876543210</p>
+        <p>Opening Hours: 10 AM – 5 PM</p>
+        <p class="copyright">&copy; 2026 PetCare. College project demonstration.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetCare | Products</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-page" class="login-page">
+        <div id="login-box" class="auth-box">
+            <h1>🐾 PetCare</h1>
+            <h2>Login</h2>
+            <form id="login-form">
+                <input type="email" id="login-email" placeholder="Enter Email" required>
+                <input type="password" id="login-password" placeholder="Enter Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p id="login-message"></p>
+            <p>Don't have an account? <a href="#" onclick="showSignup()">Sign Up</a></p>
+        </div>
+        <div id="signup-box" class="auth-box hidden">
+            <h1>🐾 PetCare</h1>
+            <h2>Create Account</h2>
+            <form id="signup-form">
+                <input type="text" id="signup-name" placeholder="Full Name" required>
+                <input type="email" id="signup-email" placeholder="Email" required>
+                <input type="password" id="signup-password" placeholder="Password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+        </div>
+    </div>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">🐾 PetCare</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="veterinarians.html">Veterinarians</a></li>
+                <li><a href="appointment.html">Book Appointment</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><button type="button" class="auth-nav-link auth-nav-signup" onclick="showLogin()">Login</button></li>
+                <li><button type="button" class="auth-nav-link auth-nav-signup" onclick="showSignup()">Sign Up</button></li>
+            </ul>
+        </nav>
+        <nav class="feature-nav" aria-label="Featured options">
+            <a href="my-pets.html"><span aria-hidden="true">🐾</span> My Pets</a>
+            <a href="pet-pal.html"><span aria-hidden="true">💬</span> Pet Pal</a>
+            <a href="adoption.html"><span aria-hidden="true">🏡</span> Find a Friend</a>
+            <a href="services.html"><span aria-hidden="true">✨</span> Care Picks</a>
+            <a href="products.html"><span aria-hidden="true">🛍️</span> Pet Products</a>
+        </nav>
+        <div class="more-menu-bar">
+            <button type="button" class="more-menu-toggle" aria-expanded="false" aria-controls="more-menu" onclick="openMoreMenu()">☰ More</button>
+        </div>
+        <div id="more-menu-overlay" class="more-menu-overlay" hidden>
+            <button type="button" class="more-menu-backdrop" aria-label="Close More menu" onclick="closeMoreMenu()"></button>
+            <aside id="more-menu" class="more-menu" aria-label="More options" aria-hidden="true">
+                <div class="more-menu-heading">
+                    <h2>More Options</h2>
+                    <button type="button" class="more-menu-close" aria-label="Close More menu" onclick="closeMoreMenu()">×</button>
+                </div>
+                <nav aria-label="More options">
+                    <ul class="more-menu-links">
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="more.html#faqs">FAQs</a></li>
+                        <li><a href="more.html#pet-care-tips">Pet Care Tips</a></li>
+                        <li><a href="more.html#offers">Offers</a></li>
+                        <li><a href="adoption.html">Adopt a Pet</a></li>
+                    </ul>
+                </nav>
+            </aside>
+        </div>
+        <div class="announcement" aria-hidden="true">
+            <div class="announcement-track">
+                <span>Healthy pets, happy homes | Explore our care options | Book your pet's next visit</span>
+                <span>Healthy pets, happy homes | Explore our care options | Book your pet's next visit</span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="section">
+            <h2>Pet Care Products</h2>
+            <p class="section-intro">Explore sample essentials for your pet's everyday care.</p>
+            <div class="service-container">
+                <article class="service-card">
+                    <div class="service-icon" aria-hidden="true">🥣</div>
+                    <h3>Food &amp; Treats</h3>
+                    <p>Everyday food and treats selected for your pet's species and life stage.</p>
+                    <details class="service-details">
+                        <summary>Product details</summary>
+                        <p>Choose food appropriate for your pet's age and health needs. Ask a veterinarian before making a major diet change.</p>
+                    </details>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon" aria-hidden="true">🦮</div>
+                    <h3>Collars &amp; Leashes</h3>
+                    <p>Walking essentials to help keep your dog secure and comfortable.</p>
+                    <details class="service-details">
+                        <summary>Product details</summary>
+                        <p>Look for secure hardware and a comfortable fit. Check the fit regularly, especially for growing pets.</p>
+                    </details>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon" aria-hidden="true">🪮</div>
+                    <h3>Grooming Brush</h3>
+                    <p>Coat-care tools for regular brushing at home.</p>
+                    <details class="service-details">
+                        <summary>Product details</summary>
+                        <p>Select a brush suited to your pet's coat type and introduce grooming gently. Stop if your pet seems uncomfortable.</p>
+                    </details>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon" aria-hidden="true">🧴</div>
+                    <h3>Pet Shampoo</h3>
+                    <p>Cleaning products made specifically for pets.</p>
+                    <details class="service-details">
+                        <summary>Product details</summary>
+                        <p>Use products labeled for your animal and follow their directions. Avoid using human shampoo unless a veterinarian advises it.</p>
+                    </details>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon" aria-hidden="true">🦷</div>
+                    <h3>Dental Care Kit</h3>
+                    <p>Pet toothbrushes and dental-care supplies for home routines.</p>
+                    <details class="service-details">
+                        <summary>Product details</summary>
+                        <p>Use pet-specific toothpaste and introduce brushing gradually. Ask your veterinarian for suitable dental-care guidance.</p>
+                    </details>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon" aria-hidden="true">🛏️</div>
+                    <h3>Beds &amp; Blankets</h3>
+                    <p>Comfortable resting places for naps and quiet time.</p>
+                    <details class="service-details">
+                        <summary>Product details</summary>
+                        <p>Choose a size that lets your pet stretch out, and consider materials that can be cleaned easily.</p>
+                    </details>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon" aria-hidden="true">🧸</div>
+                    <h3>Toys &amp; Enrichment</h3>
+                    <p>Play items to encourage activity and engagement.</p>
+                    <details class="service-details">
+                        <summary>Product details</summary>
+                        <p>Choose toys that suit your pet's size and play style. Inspect them regularly and replace damaged items.</p>
+                    </details>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon" aria-hidden="true">🧳</div>
+                    <h3>Carriers</h3>
+                    <p>Travel carriers to help pets travel more securely.</p>
+                    <details class="service-details">
+                        <summary>Product details</summary>
+                        <p>Select a well-ventilated carrier with enough room for your pet to stand and turn, and help your pet get familiar with it before travel.</p>
+                    </details>
+                </article>
+            </div>
+            <p class="demo-note">Sample catalog for demonstration only. Products, stock, and purchasing are not available through this website.</p>
+            <p class="demo-note"><a class="home-preview-link" href="contact.html">Ask us about products</a></p>
+        </section>
+    </main>
+    <footer>
+        <h2>Contact Us</h2>
+        <p>Email: info@example.com</p>
+        <p>Phone: 9876543210</p>
+        <p>Opening Hours: 10 AM – 5 PM</p>
+        <p class="copyright">&copy; 2026 PetCare. College project demonstration.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
